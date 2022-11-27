@@ -3,9 +3,6 @@
 hub="swr.cn-north-1.myhuaweicloud.com"
 repo="$hub/chenby"
 
-rm -rf images.yaml
-bash config.sh
-
 if [ -f images.yaml ]; then
    echo "[Start] sync......."
    
