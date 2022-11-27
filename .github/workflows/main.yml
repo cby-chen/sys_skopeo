@@ -31,11 +31,11 @@ jobs:
 
     - name: config
       run: |
-        bash config.sh
+        bash -x config.sh
 
     - name: sync image
       env:
         HUB_USERNAME: ${{ secrets.HUB_USERNAME }}
         HUB_PASSWORD: ${{ secrets.HUB_PASSWORD }}
       run: |
-        bash skopeo.sh
+        bash -x skopeo.sh
