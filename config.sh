@@ -39,7 +39,7 @@ skopeo list-tags --tls-verify=false  docker://docker.elastic.co/app-search/app-s
 echo "quay.io:" >> images.yaml
 echo "  images:" >> images.yaml
 echo "    coreos/flannel:" >> images.yaml
-skopeo list-tags --tls-verify=false  docker://quay.io/coreos/flannel | grep -v alpha | grep -v beta | grep -v rc | grep -v amd64 | grep -v ppc64le | grep -v arm64 | grep -v arm | grep -v s390x | grep -v SNAPSHOT | grep -v debug | grep -v master | grep -v main | grep -v \} | grep -v \] | grep -v \{ | grep -v Repository | grep -v Tags | grep -v dev | grep -v g | grep -v '-'| awk -F '"' '{print "    - "$2}' >> images.yaml
+skopeo list-tags --tls-verify=false  docker://quay.io/coreos/flannel | grep \"v | grep -v alpha | grep -v beta | grep -v rc | grep -v amd64 | grep -v ppc64le | grep -v arm64 | grep -v arm | grep -v s390x | grep -v SNAPSHOT | grep -v debug | grep -v master | grep -v main | grep -v \} | grep -v \] | grep -v \{ | grep -v Repository | grep -v Tags | grep -v dev | grep -v g | grep -v '-'| awk -F '"' '{print "    - "$2}' >> images.yaml
 echo "    ceph/ceph:" >> images.yaml
 skopeo list-tags --tls-verify=false  docker://quay.io/ceph/ceph | grep -v alpha | grep -v beta | grep -v rc | grep -v amd64 | grep -v ppc64le | grep -v arm64 | grep -v arm | grep -v s390x | grep -v SNAPSHOT | grep -v debug | grep -v master | grep -v main | grep -v \} | grep -v \] | grep -v \{ | grep -v Repository | grep -v Tags | grep -v dev | grep -v g | grep -v '-'| awk -F '"' '{print "    - "$2}' >> images.yaml
 echo "    cephcsi/cephcsi:" >> images.yaml
