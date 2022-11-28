@@ -1,4 +1,5 @@
 # sys_skopeo
+# 此仓库已废弃
 # 经GitHub将镜像推送到华为云
 
 https://github.com/cby-chen/sys_skopeo/
